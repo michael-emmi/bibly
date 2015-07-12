@@ -30,7 +30,6 @@ then the commands `./bibly.rb some.keys` and `cat some.keys | ./bibly.rb` output
       biburl    = {http://dblp.uni-trier.de/rec/bib/conf/popl/CousotC77},
       bibsource = {dblp computer science bibliography, http://dblp.org}
     }
-    conf/popl/CousotC79
 
     @inproceedings{conf/popl/CousotC79,
       author    = {Patrick Cousot and
