@@ -26,8 +26,6 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-exit if ARGF.eof?
-
 ARGF.each do |key|
   puts get(key.strip)
 end
