@@ -1,6 +1,6 @@
 # Bibly
 
-Bibly converts a sequence of DBLP keys into BibTeX entries.
+Bibly converts a sequence of [dblp] keys into BibTeX entries.
 
 Input keys are read from standard input or files specified on the command line.
 Each line contans a single key. For instance, if the file `some.keys` contains
@@ -50,4 +50,6 @@ then the commands `./bibly.rb some.keys` and `cat some.keys | ./bibly.rb` output
       bibsource = {dblp computer science bibliography, http://dblp.org}
     }
 
-Multiple key files may be given as arguments.
+Multiple key files may be given as arguments. See [dblp] for valid keys.
+
+[dblp]: http://dblp.uni-trier.de
