@@ -22,8 +22,11 @@ OptionParser.new do |opts|
   opts.separator ""
   opts.on("-h", "--help", "Show this message.") do
     puts opts
+    exit
   end
 end.parse!
+
+exit if ARGF.eof?
 
 ARGF.each do |key|
   puts get(key.strip)
