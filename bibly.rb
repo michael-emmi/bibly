@@ -10,8 +10,8 @@ SELECTOR = '#bibtex-section > pre'
 
 def get(key)
   begin
-    Nokogiri::HTML(open(URI.join(DB,key))).css(SELECTOR).first.text.
-    gsub(/DBLP:/,'')
+    Nokogiri::HTML(open(URI.join(DB,key.gsub(/^DBLP:/,'')))).
+    css(SELECTOR).first.text
   rescue OpenURI::HTTPError
     STDERR.puts "WARNING: no record found for key '#{key}''"
     nil
