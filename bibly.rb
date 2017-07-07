@@ -5,16 +5,26 @@ require 'uri'
 require 'open-uri'
 require 'nokogiri'
 
-DB = 'http://dblp.uni-trier.de/rec/bibtex1/'
+RESOURCES = {
+  DBLP: 'http://dblp.uni-trier.de/rec/bibtex1/'
+}
+
 SELECTOR = '#bibtex-section > pre'
 
-def get(key)
+def get(entry)
+  m = entry.match(/\A(?<repo>\w*):(?<key>.*)\z/) || {repo: '', key: ''}
+  repo, key = m[:repo].to_sym, m[:key]
+
   begin
-    Nokogiri::HTML(open(URI.join(DB,key.gsub(/^DBLP:/,'')))).
-    css(SELECTOR).first.text
+    raise "uknown repository '#{repo}'" unless RESOURCES[repo]
+    Nokogiri::HTML(open(URI.join(RESOURCES[repo], key)))
+    .css(SELECTOR)
+    .first
+    .text
   rescue OpenURI::HTTPError
-    STDERR.puts "WARNING: no record found for key '#{key}''"
-    nil
+    STDERR.puts "WARNING: no record found in '#{repo}' for key '#{key}'"
+  rescue StandardError => e
+    STDERR.puts "WARNING: #{e} for entry #{entry}"
   end
 end
 
