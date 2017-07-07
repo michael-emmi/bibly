@@ -1,0 +1,39 @@
+{
+  "name": "bibly",
+  "version": "1.0.0",
+  "description": "Convert DBLP-style keys into BibTeX entries.",
+  "main": "index.js",
+  "bin": {
+    "bibly": "./bin/cli.js"
+  },
+  "preferGlobal": true,
+  "scripts": {
+    "test": "true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michael-emmi/bibly.git"
+  },
+  "keywords": [
+    "dblp",
+    "bibtex",
+    "latex",
+    "bibliography"
+  ],
+  "author": "Michael Emmi <michael.emmi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michael-emmi/bibly/issues"
+  },
+  "homepage": "https://github.com/michael-emmi/bibly#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "debug": "^2.6.8",
+    "fs-extra": "^3.0.1",
+    "get-stdin": "^5.0.1",
+    "meow": "^3.7.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "split": "^1.0.0"
+  }
+}

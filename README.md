@@ -9,7 +9,7 @@ the following two lines
     conf/popl/CousotC77
     conf/popl/CousotC79
 
-then the commands `./bibly.rb some.keys` and `cat some.keys | ./bibly.rb` output
+then the commands `bibly < some.keys` and `cat some.keys | bibly` output
 
     @inproceedings{conf/popl/CousotC77,
       author    = {Patrick Cousot and
