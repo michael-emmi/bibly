@@ -1,15 +1,43 @@
+[![Build Status](https://travis-ci.org/michael-emmi/bibly.svg?branch=master)](https://travis-ci.org/michael-emmi/bibly)
+[![npm version](https://badge.fury.io/js/bibly.svg)](https://badge.fury.io/js/bibly)
+
 # Bibly
 
-Bibly converts a sequence of [dblp] keys into [BibTeX] entries.
+Bibly simplifies the creation and maintenance of bibliographies in LaTeX
+documents by fetching the [BibTex][] entries corresponding to LaTeX citations.
 
-Input keys are read from standard input or files specified on the command line.
-Each line contans a single key. For instance, if the file `some.keys` contains
-the following two lines
+# Requirements
 
-    conf/popl/CousotC77
-    conf/popl/CousotC79
+* [Node.js][]
 
-then the commands `bibly < some.keys` and `cat some.keys | bibly` output
+# Installation
+
+    $ npm i -g bibly
+
+# Usage
+
+Create a file named `bibly.json` in your LaTeX working directory like this:
+
+    {
+      "latex": "draft.tex",
+      "databases": {
+        "DBLP": {
+          "url": "http://dblp.uni-trier.de/rec/bibtex1",
+          "file": "dblp.bib"
+        }
+      }
+    }
+
+substituting the name of your LaTeX source file for `draft.tex`. Then just run
+
+    $ bibly
+
+Bibly will then locate your citations of the form `DB:key`, fetch the records
+from the specified web database, then write them to the specified file. For
+instance, given the citations `\cite{DBLP:conf/popl/CousotC77}` and
+`\cite{DBLP:conf/popl/CousotC79}` from `draft.tex` and the `bibly.json` file
+listed above, Bibly will populate the file `dblp.bib` with the following
+records:
 
     @inproceedings{conf/popl/CousotC77,
       author    = {Patrick Cousot and
@@ -50,7 +78,19 @@ then the commands `bibly < some.keys` and `cat some.keys | bibly` output
       bibsource = {dblp computer science bibliography, http://dblp.org}
     }
 
-Multiple key files may be given as arguments. See [dblp] for valid keys.
+This can be run each time new citations are added.
 
+# Development
+
+Emulate installation of local repository:
+
+    $ npm link
+
+Release a new version to npm:
+
+    $ npm version [major|minor|patch]
+    $ npm publish
+
+[Node.js]: https://nodejs.org
 [BibTex]: http://www.bibtex.org
 [dblp]: http://dblp.uni-trier.de
