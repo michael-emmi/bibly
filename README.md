@@ -17,17 +17,20 @@ documents by fetching the [BibTex][] entries corresponding to LaTeX citations.
 # Usage
 
 Create a file named `bibly.json` in your LaTeX working directory like this:
-
-    {
-      "latex": "draft.tex",
-      "databases": {
+````json
+{
+    "latex": "draft.tex",
+    "databases": {
         "DBLP": {
-          "url": "http://dblp.uni-trier.de/rec/bibtex1",
-          "file": "dblp.bib"
+            "url": "https://dblp.uni-trier.de/rec",
+            "suffix": ".bib",
+            "parameters": {
+                "param": 1
+            },
         }
-      }
     }
-
+}
+````
 substituting the name of your LaTeX source file for `draft.tex`. Then just run
 
     $ bibly
