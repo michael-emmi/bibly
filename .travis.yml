@@ -9,3 +9,4 @@ deploy:
   on:
     tags: true
     repo: michael-emmi/bibly
+  skip_cleanup: true
