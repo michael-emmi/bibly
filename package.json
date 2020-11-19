@@ -8,8 +8,9 @@
   },
   "preferGlobal": true,
   "scripts": {
-    "postinstall": "npm run build",
     "build": "tsc",
+    "postinstall": "npm run build",
+    "ci": "npm install",
     "test": "true"
   },
   "repository": {
