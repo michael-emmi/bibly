@@ -22,6 +22,7 @@ Create a file named `bibly.json` in your LaTeX working directory like this:
     "latex": "draft.tex",
     "databases": {
         "DBLP": {
+            "file": "dblp.bib",
             "url": "https://dblp.uni-trier.de/rec",
             "suffix": ".bib",
             "parameters": {
