@@ -1,13 +1,9 @@
 language: node_js
-dist: trusty
-node_js:
-- node
 deploy:
   provider: npm
   email: michael.emmi@gmail.com
-  api_key:
+  api_token:
     secure: pcRLbQcPFcRfc98ziPj4TkS6sjO3Cxa3LUR7dXCatni2OiX4TQaQ+Kf9yXdPYf/DHhCmDXUUH5di/lKPv1wZHEedrNTwtqmmpaCvygcd5pNO2F2kiFbtc9kVDPbr7gCeDkJWFfUbI8LWB82ndxwNnGChcuWXlTyT9fboZNUJz8AOmIVo/JSONEtBrbvcTuJx+1cp1rrRYtrry/hGT06lDBCtcpKWIOEYoI+l4I3bjNDjexlp8xl6fBqhCCYM+hUyUeffW3AYA/WV/mwMkvJsStKp8K0GGk/pE2xUBzPzN9d5D+4vKJUboLgbPoX9418Dpvs5NrZwkM9pkTLv3tZoRz61fwCVlDM66QA5EhfsPP8eIk6hQvDdUYoLp1xw7gkoeAGKyuGA25Bx75k/WkBJoUpPSmKsqy7hUsSO3VHBIDA8qP0CronP46LSjKI0P8Mbbhzrgeil7eIyNz66EyH33snBCuTRmJdpx7opqh0vRfcfYlWsErKSZ3nL7DtfguQJjVgck/aZ9KRUX3U1xGD73qtAik6M7dAKT3RsWhscbO08I/LXqQLuQEjyInitno/OzfCX5QMb6Pjmvjnx7MCtQys2SFZSutHvZ3+WBNqTjcnEmgo3NIlubZ72UmByo1mEPdQ5058CP6stfN36oDVofyM7BZo/a/KKjIRtgy22U7g=
   on:
     tags: true
     repo: michael-emmi/bibly
-  skip_cleanup: 'true'
