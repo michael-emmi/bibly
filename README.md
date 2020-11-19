@@ -23,11 +23,11 @@ Create a file named `bibly.json` in your LaTeX working directory like this:
     "databases": {
         "DBLP": {
             "file": "dblp.bib",
-            "url": "https://dblp.uni-trier.de/rec",
-            "suffix": ".bib",
             "parameters": {
                 "param": 1
             },
+            "suffix": ".bib",
+            "url": "https://dblp.uni-trier.de/rec"
         }
     }
 }
