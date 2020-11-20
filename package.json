@@ -4,6 +4,7 @@
   "description": "Convert DBLP-style keys into BibTeX entries.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": ["dist"],
   "bin": {
     "bibly": "dist/cli.js"
   },
