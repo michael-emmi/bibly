@@ -1,6 +1,6 @@
 {
   "name": "bibly",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "Convert DBLP-style keys into BibTeX entries.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
