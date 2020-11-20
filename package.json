@@ -10,7 +10,7 @@
   "scripts": {
     "build": "tsc",
     "postinstall": "npm run build",
-    "ci": "npm install",
+    "pretest": "npm run build",
     "test": "true"
   },
   "repository": {
