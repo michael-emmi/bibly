@@ -5,7 +5,8 @@ import meow from 'meow';
 import * as fs from 'fs-extra';
 import { fail } from 'assert';
 import { readConfig, Config } from './config';
-import { getRecord, isRecord, getEntries } from '.';
+import { getRecord, isRecord } from './record';
+import { getEntries } from './entry';
 
 const debug = Debug('bibly:cli');
 

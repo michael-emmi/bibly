@@ -1,0 +1,12 @@
+{
+    "blah": {
+      "DBLP": {
+        "file": "dblp.bib",
+        "url": "https://dblp.uni-trier.de/rec",
+        "suffix": ".bib",
+        "parameters": {
+          "param": 1
+        }
+      }
+    }
+  }
