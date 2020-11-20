@@ -9,7 +9,7 @@
   },
   "preferGlobal": true,
   "scripts": {
-    "build": "tsc",
+    "build": "npx tsc",
     "prepare": "npm run build",
     "test": "true"
   },
