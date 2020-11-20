@@ -2,13 +2,10 @@
   "name": "bibly",
   "version": "1.3.8",
   "description": "Convert DBLP-style keys into BibTeX entries.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "bin": {
-    "bibly": "dist/cli.js"
+    "bibly": "dist/src/cli.js"
   },
   "preferGlobal": true,
   "scripts": {
