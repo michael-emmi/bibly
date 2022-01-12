@@ -2,6 +2,7 @@ import Debug from 'debug';
 import request from 'request-promise';
 import { Databases } from "./config";
 import { fail } from 'assert';
+import { StatusCodeError } from 'request-promise/errors';
 
 const debug = Debug('bibly:record');
 
@@ -39,7 +40,7 @@ export async function getRecord(entry: string, databases: Databases): Promise<Re
 
         return { key: entry, db, record };
     } catch (e) {
-        return { key: entry, error: e };
+        return { key: entry, error: (e as Error).message };
     }
 }
 
@@ -79,8 +80,8 @@ async function fetchRecord(url: string) {
     try {
         return await request(url);
     } catch (e) {
-        if (e.name === 'StatusCodeError') {
-            fail(`request failed with code ${e.statusCode}`);
+        if ((e as Error).name === 'StatusCodeError') {
+            fail(`request failed with code ${(e as StatusCodeError).statusCode}`);
         } else {
             throw e;
         }
