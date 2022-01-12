@@ -6,9 +6,9 @@ import util from 'util';
 
 const exec = util.promisify(child_process.exec);
 const root = path.resolve(__dirname, '..');
-const cli = path.join(root, 'dist', 'cli.js');
+const cli = path.join(root, 'dist', 'src', 'cli.js');
 const command = `node ${cli}`;
-const resources = path.join(root, 'resources');
+const resources = path.join(root, 'resources') ;
 const documents = path.join(resources, 'latex');
 
 describe('The bibly CLI', function () {

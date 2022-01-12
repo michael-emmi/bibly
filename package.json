@@ -32,7 +32,7 @@
   "dependencies": {
     "debug": "^2.6.8",
     "fs-extra": "^3.0.1",
-    "meow": "^3.7.0",
+    "meow": "^9.0.0",
     "request": "^2.88.2",
     "request-promise": "^4.2.1",
     "split": "^1.0.0"
