@@ -7,7 +7,7 @@ import { readConfig, isConfig } from '../src/config';
 use(chai);
 
 describe('sample configuration files', () => {
-    const resourcePath = path.join('resources');
+    const resourcePath = path.join('resources/config');
     const validConfigFiles = [
         'config.json',
         'config-with-latex.json',

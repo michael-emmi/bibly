@@ -1,2 +1,5 @@
 node_modules
 dist
+resources/latex/*/*
+!resources/latex/*/bibly.json
+!resources/latex/*/main.tex
